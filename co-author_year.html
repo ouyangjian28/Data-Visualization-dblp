@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/author.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class = "container-fluid" style="margin: 10px">
+            <nav class = "nav nav-pills flex-column flex-sm-row">
+                <a class = "flex-sm-fill text-sm-center nav-link active"href="main.html">Home </a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "co-author_distr.html">co-Author</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "#">co-Author_year</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "authorGraph/authorGraph.html">Author Colaboration & Publications</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "keyWords.html">keyWords</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "ai_keyWords.html">ai_keyWords</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "pages.html">pages</a>
+            </nav>
+            <br>
+            <div class = "card">
+                <h4 class="card-header">Co Author Anaylsis</h4>
+                <div class ="card-block">
+                    <p class = "card-text">click on the button to switch between topics.</p>
+                    <button type="button" class="btn btn-primary btn-sm" id = "article_btn" onclick = "update(data1)">Article</button>
+                    <button type="button" class="btn btn-primary btn-sm" id = "proceedings_btn" onclick = "update(data2)">In Proceedings</button>
+                    <button type="button" class="btn btn-primary btn-sm" id = "book_btn" onclick = "update(data3)" >Book</button>
+                    <button type="button" class="btn btn-primary btn-sm" id = "collection_btn" onclick = "update(data4)">In Collection</button>
+                </div>
+                <div id = "my_dataviz" ></div>
+            </div>
+        </div>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="d3-tip.js"></script>
+        <script src="d3-legend.min.js"></script>
+        <script src="scripts/co-author_overYear.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+      <meta charset="utf-8">
+      
+      
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <title>UCL Information Security: Collaborators and Venues</title>
+  
+      <!-- Bootstrap core CSS -->
+      <!--<link href="css/bootstrap.css" rel="stylesheet"> -->
+  
+      <!-- Custom styles for this template -->
+      <link href="sticky-footer.css" rel="stylesheet">
+    </head>
+    <style>
+
+        .node {
+          stroke: #fff;
+          stroke-width: 1.5px;
+        }
+        
+        .link {
+          stroke: #999;
+          stroke-opacity: .6;
+        }
+        
+    </style>
+    <body>
+        
+        <div class =  "container-fluid" style="margin: 10px">
+          <nav class = "nav nav-pills flex-column flex-sm-row">
+            <a class = "flex-sm-fill text-sm-center nav-link active"href="../main.html">Home </a>
+            <a class = "flex-sm-fill text-sm-center nav-link"href = "../co-author_distr.html">co-Author</a>
+            <a class = "flex-sm-fill text-sm-center nav-link"href = "../co-author_year.html">co-Author_year</a>
+            <a class = "flex-sm-fill text-sm-center nav-link"href = "#">Author Colaboration & Publications</a>
+            <a class = "flex-sm-fill text-sm-center nav-link"href = "../keyWords.html">keyWords</a>
+            <a class = "flex-sm-fill text-sm-center nav-link"href = "../ai_keyWords.html">ai_keyWords</a>
+            <a class = "flex-sm-fill text-sm-center nav-link"href = "../pages.html">pages</a>
+        </nav>
+        <br>
+            <div class="card">
+                <h4 class="card-header">ASU CSDIE researching group <small>Collaborations &amp; Publications</small></h4>
+            </div>
+        
+              <div class="row">
+                <div class="col-md-6">
+                  <p id="authors" style="border: 1px solid #DEDEDE" onresize=""/>
+                  <p><small>Hover over the graph of co-authors and venues to see papers. Click to freeze or unfreeze. Reload to change layout. </small>
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <p id="papers"/>
+                </div>
+            </div>
+        </div>
+
+        
+        <script src="js/d3.v3.js"></script>
+        <script src="js/fisheye.js"></script>
+        
+        <script src="js/graphauthors.js"></script>
+        <script>
+            function resize(){
+                graph_authors("#authors", "data/graph.json", $("#authors").width(), 600); }
+
+            resize();
+
+            get_data("data/index.json");
+            set_paperID("#papers")    
+        </script>
+    </body>
+</html>

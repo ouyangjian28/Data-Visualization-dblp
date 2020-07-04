@@ -1,0 +1,6 @@
+date,article,incollection,inproceeding,master_phd_book,proceedings
+year<=1963,801,0,275,7,4
+1963<year<=1974,4627,0,2207,20,31
+1974 < year <= 1985,16642,77,15147,139,223
+1985 < year <= 1995,39408,490,81089,437,1084
+1995 < year <= 2003,50130,441,113554,317,1664

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/author.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class = "container-fluid" style="margin: 10px">
+            <nav class = "nav nav-pills flex-column flex-sm-row">
+                <a class = "flex-sm-fill text-sm-center nav-link active"href="main.html">Home </a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "#">co-Author</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "co-author_year.html">co-Author_year</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "authorGraph/authorGraph.html">Author Colaboration & Publications</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "keyWords.html">keyWords</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "ai_keyWords.html">ai_keyWords</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "pages.html">pages</a>
+            </nav>
+            <br>
+            <div class = "card">
+                <h4 class="card-header">Co-Author Distribution</h4>
+                <div class ="card-block">
+                    <p class = "card-text">Hover the mouse to see the details.</p>
+                </div>
+                
+                <div id = "my_dataviz2" style = "height : 600px"></div>
+            </div>
+        </div>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        
+        <script src="scripts/co-author_distr.js "></script>
+    </body>
+</html>

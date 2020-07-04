@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+   
+    <style>
+        body {
+      font: 10px sans-serif;
+    }
+    @media (min-width: 576px) { 
+        #chart {
+          width: 100%;
+          height: 100%;
+          overflow-x: scroll;
+        }
+    h1 {
+      font-size: 2em;
+      padding:1.4em 80px 0em 80px;
+      margin: 0em;
+      }
+    p {
+      font-size: 1.4em;
+      padding:1.4em 80px 1em 80px;
+      margin: 0em;
+    }
+    }
+    
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+    
+    .x.axis path {
+      display: none;
+    }
+    
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+  </style>
+   </head>
+    <body>
+        <div class = "container-fluid" style="margin: 10px">
+            <nav class = "nav nav-pills flex-column flex-sm-row">
+                <a class = "flex-sm-fill text-sm-center nav-link active"href="main.html">Home </a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "co-author_distr.html">co-Arthor</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "co-author_year.html">co-Author_year</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "authorGraph/authorGraph.html">Author Colaboration & Publications</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "keyWords.html">keyWords</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "#">ai_keyWords</a>
+                <a class = "flex-sm-fill text-sm-center nav-link"href = "pages.html">pages</a>
+            </nav>
+            <br>
+            <div class = "card">
+                <h4 class="card-header">Keywords Anaysis</h4>
+                <div class ="card-block">
+                    <p class="card-text">The frequency of the AI related Key words over the year</p>
+                </div>
+                <div>
+                    <div id = "ai_keywords"></div>
+                </div>
+            </div>
+            
+                
+
+        </div>
+        <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="scripts/ai_keyWords.js"></script>
+
+        <!--<script src="scripts/wordCloud.js"></script> -->
+        
+        <script src="d3-tip.js"></script>
+        <script src="d3-legend.min.js"></script>
+    </body>
+</html>
